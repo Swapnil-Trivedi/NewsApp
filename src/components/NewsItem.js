@@ -13,7 +13,7 @@ export class NewsItem extends Component {
             <div className="d-flex flex-column card-body" style={{height: "14rem"}}>
                 <h5 className="card-title">{title}...</h5>
                 <p className="card-text">{description}...</p>
-                <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary mt-auto">Read more</a>
+                <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-dark mt-auto">Read more</a>
             </div>
         </div>
       </div>
