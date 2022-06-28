@@ -59,7 +59,7 @@ export class Newscard extends Component {
         {this.state.articles.map((ele)=>{
 
             return(
-            <div className="col-md-4" key={ele.url}>
+            <div className="col-md-3" key={ele.url}>
                 <NewsItem title={ele.title.slice(0,45)} description={ele.description.slice(0,88)} imageUrl={ele.urlToImage} newsUrl={ele.url}/>
             </div>
             )
