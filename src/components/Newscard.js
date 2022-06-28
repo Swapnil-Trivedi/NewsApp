@@ -65,7 +65,7 @@ export class Newscard extends Component {
   render() {
     return (
       <div className="container my-3 text-center">
-        <h1>NewsMonkey - {this.props.category==="general"?"Top Headlines":`Top ${this.props.category} articles`}</h1>
+        <h1 style={{margin:"90px 0px"}}>NewsMonkey - {this.props.category==="general"?"Top Headlines":`Top ${this.props.category} articles`}</h1>
         {/* show spinner when it's loading */}
         {this.state.loading && <Spinner/>}
         {/* iterating over articles */}

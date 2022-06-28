@@ -13,7 +13,7 @@ export class NewsItem extends Component {
             <div className="d-flex flex-column mb-3 card-body" style={{height: "19rem"}}>
                 <h5 className="card-title">{title}...</h5>
                 <p className="card-text">{description}...</p>
-                <span class="badge rounded-pill text-bg-secondary " style={{width:"8rem"}}>{source}</span>
+                <span className="badge rounded-pill text-bg-secondary " style={{width:"8rem"}}>{source}</span>
                 <p className="card-text mt-auto"><small className="text-muted">By <b>{!author?"Unkown":author}</b> on <b>{new Date(date).toString().slice(0,15)}</b></small></p>
                 <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-dark mt-auto">Read more</a>
             </div>
