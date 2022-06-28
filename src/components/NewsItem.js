@@ -8,7 +8,7 @@ export class NewsItem extends Component {
 
     return (
       <div>
-        <div className="card my-3" style={{width: "18rem"}}>
+        <div className="card my-3">
             <img src={imageUrl?imageUrl:"https://cdn.w600.comps.canstockphoto.com/breaking-news-world-icon-image_csp66446979.jpg"} className="card-img-top" alt="..." height="175" />
             <div className="d-flex flex-column card-body" style={{height: "14rem"}}>
                 <h5 className="card-title">{title}...</h5>
