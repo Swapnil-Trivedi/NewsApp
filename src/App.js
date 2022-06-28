@@ -14,7 +14,7 @@ export default class App extends Component {
     return (
       <>
       <Navbar/>
-      <Newscard pageSize={8}/>
+      <Newscard pageSize={8} category={"science"}/>
       </>
     )
   }

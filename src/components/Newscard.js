@@ -1,9 +1,23 @@
 import React, { Component } from 'react'
-import Spinner from './Spinner';
+import PropTypes from 'prop-types';
 //component imports
 import NewsItem from './NewsItem';
+import Spinner from './Spinner';
 
 export class Newscard extends Component {
+
+    static defaultProps={
+        country: 'in',
+        pageSize:8,
+        category: 'general'
+    }
+
+    static propTypes={
+        country: PropTypes.string,
+        pageSize: PropTypes.number,
+        category: PropTypes.string,
+    }
+
     constructor(){
         super();
         this.state={
@@ -15,7 +29,7 @@ export class Newscard extends Component {
       }
     //using compenet mount to fetch
     async componentDidMount(){
-        let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=1&pageSize=${this.props.pageSize}`;
+        let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=1&pageSize=${this.props.pageSize}`;
         this.setState({loading:true});
         let data= await fetch(url);
         let parsedData=await data.json();
@@ -29,7 +43,7 @@ export class Newscard extends Component {
         }
         else{
             
-        let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
+        let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
         this.setState({loading:true});
         let data= await fetch(url);
         let parsedData=await data.json();
@@ -38,7 +52,7 @@ export class Newscard extends Component {
     }
     handlePrevious = async () => {
         
-        let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=${this.state.page-1}&pageSize=${this.props.pageSize}`;
+        let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=${this.state.page-1}&pageSize=${this.props.pageSize}`;
         this.setState({loading:true});
         let data= await fetch(url);
         let parsedData=await data.json();
@@ -77,3 +91,7 @@ export class Newscard extends Component {
 }
 
 export default Newscard
+
+
+
+
