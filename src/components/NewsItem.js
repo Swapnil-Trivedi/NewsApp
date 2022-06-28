@@ -8,8 +8,8 @@ export class NewsItem extends Component {
 
     return (
       <div>
-        <div className="card" style={{width: "18rem"}}>
-            <img src={imageUrl} className="card-img-top" alt="..." height="175" />
+        <div className="card my-3" style={{width: "18rem"}}>
+            <img src={imageUrl?imageUrl:"https://cdn.w600.comps.canstockphoto.com/breaking-news-world-icon-image_csp66446979.jpg"} className="card-img-top" alt="..." height="175" />
             <div className="card-body">
                 <h5 className="card-title">{title}...</h5>
                 <p className="card-text">{description}...</p>

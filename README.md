@@ -1,4 +1,4 @@
-## Componenets List 
+## Components List 
 - Navbar
 - News Items
 - footer
