@@ -64,8 +64,8 @@ export class Newscard extends Component {
 
   render() {
     return (
-      <div className="container my-3">
-        <h1>NewsMonkey - Top Headlines</h1>
+      <div className="container my-3 text-center">
+        <h1>NewsMonkey - {this.props.category==="general"?"Top Headlines":`Top ${this.props.category} articles`}</h1>
         {/* show spinner when it's loading */}
         {this.state.loading && <Spinner/>}
         {/* iterating over articles */}
@@ -75,7 +75,7 @@ export class Newscard extends Component {
 
             return(
             <div className="col-md-3" key={ele.url} >
-                <NewsItem title={ele.title?ele.title.slice(0,45):""} description={ele.description?ele.description.slice(0,75):""} imageUrl={ele.urlToImage} newsUrl={ele.url}/>
+                <NewsItem title={ele.title?ele.title.slice(0,35):""} description={ele.description?ele.description.slice(0,65):""} imageUrl={ele.urlToImage} newsUrl={ele.url} author={ele.author} date={ele.publishedAt} source={ele.source.name}/>
             </div>
             )   
         })}
