@@ -17,8 +17,7 @@ export class Navbar extends Component {
                         <Link className="nav-link" aria-current="page" to="/">Home</Link>
                       </li>
                             <li className="nav-item"><Link className="nav-link" to="/Business">Business</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/Ertainment">Ertainment</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/General">General</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/Entertainment">Entertainment</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/Health">Health</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/Science">Science</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/Sports">Sports</Link></li>

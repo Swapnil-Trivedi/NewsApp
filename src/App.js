@@ -17,14 +17,14 @@ export default class App extends Component {
       <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Newscard pageSize={8} category={"general"}/>}/>
-        <Route path="/Business" element={<Newscard pageSize={8} category="business"/>}/>
-        <Route path="/Ertainment" element={<Newscard pageSize={8} category="ertainment"/>}/>
-        <Route path="/General" element={<Newscard pageSize={8} category="general"/>}/>
-        <Route path="/Health" element={<Newscard pageSize={8} category="health"/>}/>
-        <Route path="/Science" element={<Newscard pageSize={8} category="science"/>}/>
-        <Route path="/Sports" element={<Newscard pageSize={8} category="sports"/>}/>
-        <Route path="/Technology" element={<Newscard pageSize={8} category="technology"/>}/>
+        {/* Just need to pass aunique key to all NewsCard element since react think they are all the same and won't remount */}
+        <Route path="/" element={<Newscard key={"general"} pageSize={8} category={"general"}/>}/>
+        <Route path="/Business" element={<Newscard key={"business"} pageSize={8} category="business"/>}/>
+        <Route path="/Entertainment" element={<Newscard key={"entertainment"} pageSize={8} category="entertainment"/>}/>
+        <Route path="/Health" element={<Newscard key={"health"} pageSize={8} category="health"/>}/>
+        <Route path="/Science" element={<Newscard key={"science"} pageSize={8} category="science"/>}/>
+        <Route path="/Sports" element={<Newscard key={"sports"} pageSize={8} category="sports"/>}/>
+        <Route path="/Technology" element={<Newscard key={"technology"} pageSize={8} category="technology"/>}/>
 
       </Routes>
 
