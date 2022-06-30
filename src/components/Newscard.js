@@ -43,6 +43,7 @@ export class Newscard extends Component {
         else{
             console.log(data.status);
             this.setState({loading:false,error:true});
+            this.props.setProgress(100);
             alert("Rate limit for API exceeded");
             
         }

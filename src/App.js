@@ -4,7 +4,6 @@ import './App.css';
 import React, { Component } from 'react'
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
-
 //Import componnets
 import Navbar from './components/Navbar';
 import Newscard from './components/Newscard';
@@ -18,6 +17,11 @@ export default class App extends Component {
     return (
       <>
       <Router>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={this.state.progress}
+      />
       <Navbar/>
       <Routes>
         {/* Just need to pass aunique key to all NewsCard element since react think they are all the same and won't remount */}
