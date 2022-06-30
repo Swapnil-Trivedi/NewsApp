@@ -18,12 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
-    "eject": "react-scripts eject",
-=======
-    "eject": "react-scripts eject",     
->>>>>>> 6b84364abbaedf28212b075a09076fdf7cf68dde
-    "heroku-pre": "npm intsall --save --legacy-peer-deps"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

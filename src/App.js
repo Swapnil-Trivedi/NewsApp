@@ -17,11 +17,6 @@ export default class App extends Component {
     return (
       <>
       <Router>
-      <LoadingBar
-        height={3}
-        color='#f11946'
-        progress={this.state.progress}
-      />
       <Navbar/>
       <Routes>
         {/* Just need to pass aunique key to all NewsCard element since react think they are all the same and won't remount */}
