@@ -33,16 +33,18 @@ export class Newscard extends Component {
         
       }
     async updateNews(){         
-        const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ef5afa752aee46bc9b91d8aca3cdbbb8&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         let data= await fetch(url);
-        if(data.status===200 || data.staus==="ok"){
+                if(data.status===200 || data.staus==="ok"){
             let parsedData=await data.json();
-            this.setState({articles:this.state.articles.concat(parsedData.articles),totalResults: parsedData.totalResults,loading:false,page:this.state.page+1});
+                        this.setState({articles:this.state.articles.concat(parsedData.articles),totalResults: parsedData.totalResults,loading:false,page:this.state.page+1});
+            
         }
         else{
             console.log(data.status);
             this.setState({loading:false,error:true});
             alert("Rate limit for API exceeded");
+            
         }
 
     }
