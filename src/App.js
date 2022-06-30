@@ -11,7 +11,7 @@ import Newscard from './components/Newscard';
 
 export default class App extends Component {
 
-  apiKey=process.env.REACT_APP_NEWS_API
+  apiKey="ef5afa752aee46bc9b91d8aca3cdbbb8";
 
   render() {
     return (
