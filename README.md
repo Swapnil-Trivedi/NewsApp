@@ -33,3 +33,10 @@ To run this application on a linux box, clone the repository and execute the fol
     $ npm install
     $ npm start
 ```
+
+## Preview
+
+
+https://user-images.githubusercontent.com/63580574/176898375-ff2a5f81-6216-4764-ab17-89784feab8e2.mp4
+
+
